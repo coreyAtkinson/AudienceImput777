@@ -7,23 +7,51 @@
 
 import UIKit
 
-class SeeResponcesViewController: UIViewController {
-
+class SeeResponcesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    var r = [String]()
+    @IBOutlet weak var tableOutlet: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var i = 0
+        while i < AppData.shows[AppData.index].responces.count
+        {
+            r.append(AppData.shows[AppData.index].responces[i])
+            
+            i = i + 1
+            
+            
+            
+            
+        }
+        
+        
+        tableOutlet.dataSource = self
+        tableOutlet.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return AppData.shows[AppData.index].responces.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        
+        
+        cell.textLabel?.text = AppData.shows[AppData.index].responces[indexPath.row]
+     
+        return cell
+    }
 
+    @IBAction func refreshOutlet(_ sender: UIButton) {
+        
+        tableOutlet.reloadData()
+    }
+    
 }

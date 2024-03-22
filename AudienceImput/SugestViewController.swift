@@ -9,21 +9,36 @@ import UIKit
 
 class SugestViewController: UIViewController {
 
+    @IBOutlet weak var newSuggestionOutlet: UITextField!
+    @IBOutlet weak var dispayCurrentTopicOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(AppData.shows[AppData.i].currentTopic)
+        
+        dispayCurrentTopicOutlet.text = AppData.shows[AppData.i].currentTopic
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func addAction(_ sender: UIButton) {
+        var text = newSuggestionOutlet.text!
+        
+        AppData.shows[AppData.i].responces.append(text)
+        
+        AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        
+        
     }
-    */
+    
 
+    @IBAction func refreshAction(_ sender: UIBarButtonItem) {
+        
+        dispayCurrentTopicOutlet.text = AppData.shows[AppData.i].currentTopic
+        
+        
+        
+    }
 }
