@@ -66,8 +66,35 @@ class SeeShowsViewController: UIViewController,  UITableViewDelegate, UITableVie
         print("row: \(indexPath.row)")
         AppData.i = indexPath.row
         
+        let alertController = UIAlertController(title: "Enter password for \(AppData.shows[AppData.i].name)", message: "", preferredStyle: .alert)
+            alertController.addTextField { (textField : UITextField!) -> Void in
+                textField.placeholder = "Enter Password"
+            }
+            let saveAction = UIAlertAction(title: "Enter", style: .default, handler: { alert -> Void in
+                let firstTextField = alertController.textFields![0] as UITextField
+                if firstTextField.text == AppData.shows[AppData.i].pass
+                {
+                    print("correct password")
+                    self.performSegue(withIdentifier: "toAddStuff", sender: nil)
+                }
+                else
+                {
+                    print("wrong password")
+                }
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action : UIAlertAction!) -> Void in })
+          //  alertController.addTextField { (textField : UITextField!) -> Void in
+          //      textField.placeholder = "Enter First Name"
+          //  }
+
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         
-        performSegue(withIdentifier: "toAddStuff", sender: nil)
+        
+        
+      //  performSegue(withIdentifier: "toAddStuff", sender: nil)
         
     }
 
