@@ -9,6 +9,8 @@ import UIKit
 
 class SugestViewController: UIViewController {
 
+    @IBOutlet weak var cooldownOutlet: UILabel!
+    @IBOutlet weak var addButtonOutlet: UIButton!
     @IBOutlet weak var newSuggestionOutlet: UITextField!
     @IBOutlet weak var dispayCurrentTopicOutlet: UILabel!
     override func viewDidLoad() {
@@ -27,13 +29,18 @@ class SugestViewController: UIViewController {
         AppData.shows[AppData.i].responces.append(text)
         
         AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
-
-        
-        
-        
+        newSuggestionOutlet.text = ""
+        addButtonOutlet.isEnabled = false
+        cooldownOutlet.text = "wait 10 seconds before next sugestion!"
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { _ in
+            self.addButtonOutlet.isEnabled = true
+            self.cooldownOutlet.text = " "
+        })
     }
     
-
+   
+    
+    
     @IBAction func refreshAction(_ sender: UIBarButtonItem) {
         
         dispayCurrentTopicOutlet.text = AppData.shows[AppData.i].currentTopic

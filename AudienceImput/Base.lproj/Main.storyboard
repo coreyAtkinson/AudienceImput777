@@ -139,7 +139,7 @@
                                     <action selector="addAction:" destination="f3g-Dz-zG7" eventType="touchUpInside" id="H6O-49-XY7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cooldown: 10 sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exm-Nu-F2n">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exm-Nu-F2n">
                                 <rect key="frame" x="45" y="485" width="284" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -167,6 +167,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButtonOutlet" destination="jxY-Cp-scv" id="ksN-OX-4Fb"/>
+                        <outlet property="cooldownOutlet" destination="Exm-Nu-F2n" id="9MS-Qd-bW1"/>
                         <outlet property="dispayCurrentTopicOutlet" destination="mYG-vC-Rew" id="kKK-l8-iJ3"/>
                         <outlet property="newSuggestionOutlet" destination="9yM-3Y-1jZ" id="CdJ-Cp-gsf"/>
                     </connections>
@@ -394,7 +396,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
