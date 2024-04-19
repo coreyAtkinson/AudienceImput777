@@ -80,6 +80,17 @@ class SeeShowsViewController: UIViewController,  UITableViewDelegate, UITableVie
                 else
                 {
                     print("wrong password")
+                
+                    
+                    let alertController2 = UIAlertController(title: "Password is wrong! Can't sign into \(AppData.shows[AppData.i].name)...", message: "", preferredStyle: .alert)
+                    
+                    let okayAction = UIAlertAction(title: "Okay", style: .default, handler: { (action : UIAlertAction!) -> Void in })
+                    
+                    
+                    
+                    alertController2.addAction(okayAction)
+                    self.present(alertController2, animated: true, completion: nil)
+                    
                 }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action : UIAlertAction!) -> Void in })
@@ -87,11 +98,12 @@ class SeeShowsViewController: UIViewController,  UITableViewDelegate, UITableVie
           //      textField.placeholder = "Enter First Name"
           //  }
 
-            alertController.addAction(saveAction)
-            alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
             
-            self.present(alertController, animated: true, completion: nil)
         
+            self.present(alertController, animated: true, completion: nil)
+    
         
         
       //  performSegue(withIdentifier: "toAddStuff", sender: nil)
