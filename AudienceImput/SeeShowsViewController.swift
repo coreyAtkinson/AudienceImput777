@@ -98,9 +98,9 @@ class SeeShowsViewController: UIViewController,  UITableViewDelegate, UITableVie
           //      textField.placeholder = "Enter First Name"
           //  }
 
-        alertController.addAction(saveAction)
+      
         alertController.addAction(cancelAction)
-            
+        alertController.addAction(saveAction)
         
             self.present(alertController, animated: true, completion: nil)
     

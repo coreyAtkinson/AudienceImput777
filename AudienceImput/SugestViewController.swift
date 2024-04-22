@@ -8,6 +8,7 @@
 import UIKit
 
 class SugestViewController: UIViewController {
+    var counter = 10
 
     @IBOutlet weak var cooldownOutlet: UILabel!
     @IBOutlet weak var addButtonOutlet: UIButton!
@@ -25,21 +26,33 @@ class SugestViewController: UIViewController {
 
     @IBAction func addAction(_ sender: UIButton) {
         var text = newSuggestionOutlet.text!
-        
+      //  self.counter = 10
         AppData.shows[AppData.i].responces.append(text)
         
         AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
         newSuggestionOutlet.text = ""
         addButtonOutlet.isEnabled = false
         cooldownOutlet.text = "wait 10 seconds before next sugestion!"
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
         Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { _ in
             self.addButtonOutlet.isEnabled = true
             self.cooldownOutlet.text = " "
+           
         })
     }
     
    
-    
+    @objc func updateCounter() {
+        //example functionality
+        if counter > 0 {
+            print("\(counter) seconds to the end of the world")
+            cooldownOutlet.text = "cooldown: \(counter) sec"
+            counter -= 1
+        }
+       
+    }
+
     
     @IBAction func refreshAction(_ sender: UIBarButtonItem) {
         
