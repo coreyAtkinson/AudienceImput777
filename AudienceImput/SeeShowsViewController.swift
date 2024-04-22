@@ -58,7 +58,12 @@ class SeeShowsViewController: UIViewController,  UITableViewDelegate, UITableVie
         var cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         
         cell.textLabel?.text = AppData.shows[indexPath.row].name
+        
+        
+        cell.textLabel?.textColor = UIColor(_colorLiteralRed: 170, green: 51, blue: 106, alpha: 1)
      
+    
+        
         return cell
     }
     
