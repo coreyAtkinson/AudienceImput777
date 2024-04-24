@@ -32,13 +32,17 @@ class Show {
     var ref = Database.database().reference()
     var key = ""
     
-    init(name: String, pass: String, currentTopic: String, responces: [String] = [String](), isActive: Bool = true, indexInArray : Int){
+    //here is the admin password
+    var admin : String
+    
+    init(name: String, pass: String, currentTopic: String, responces: [String] = [String](), isActive: Bool = true, indexInArray : Int, admin: String){
         self.name = name
         self.pass = pass
         self.currentTopic = currentTopic
         self.responces = responces
         self.isActive = isActive
         self.indexInArray = indexInArray
+        self.admin = admin
     }
     
     init(dict: [String : Any]) {
@@ -48,6 +52,7 @@ class Show {
         else{
            name  = "John Show"
         }
+       
         if let p = dict["pass"] as? String {
             pass = p
         }
@@ -83,11 +88,19 @@ class Show {
         {
             indexInArray = -1
         }
+     //new admin added
+            if let a = dict["admin"] as? String{
+               admin = a
+            }
+        else{
+            admin = "no admin found"
+        }
+        
     }
     
     
     func saveToFirebase() {
-        let dict = ["name": name, "pass":pass, "currentTopic": currentTopic, "responces": responces, "isActive": isActive, "indexInArray": indexInArray] as [String: Any]
+        let dict = ["name": name, "pass":pass, "currentTopic": currentTopic, "responces": responces, "isActive": isActive, "indexInArray": indexInArray, "admin": admin] as [String: Any]
 var yay = ref.child("shows").childByAutoId()
         ref.child("shows").child(yay.key!).setValue(dict)
 
@@ -150,8 +163,8 @@ class AddShowViewController: UIViewController {
         AppData.totalShows = AppData.totalShows + 1
         
         AppData.ref.child("totalShows").childByAutoId().setValue(AppData.totalShows)
-        
-        var s = Show(name: nameOutlet.text!, pass: passOutlet.text!, currentTopic: "", responces: ["test responce 1", "test responce 2"], indexInArray: AppData.totalShows)
+        //okay you need to add a new text outlet to add
+        var s = Show(name: nameOutlet.text!, pass: passOutlet.text!, currentTopic: "", responces: ["test responce 1", "test responce 2"], indexInArray: AppData.totalShows, admin: "INSERT ADMIN HERE")
       //  AppData.shows.append(s)
         s.saveToFirebase()
 
