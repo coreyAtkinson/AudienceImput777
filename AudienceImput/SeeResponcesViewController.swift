@@ -45,7 +45,10 @@ class SeeResponcesViewController: UIViewController, UITableViewDelegate, UITable
         
         
         cell.textLabel?.text = AppData.shows[AppData.index].responces[indexPath.row]
-     
+        
+        cell.textLabel?.textColor = UIColor(_colorLiteralRed: 170, green: 51, blue: 106, alpha: 1)
+        
+        
         return cell
     }
 

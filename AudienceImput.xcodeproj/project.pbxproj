@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670C72E82BD949C6005E2C19 /* ViewController22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C72E72BD949C6005E2C19 /* ViewController22.swift */; };
 		B99FCE912B98C08D00C73370 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B99FCE902B98C08D00C73370 /* FirebaseAuth */; };
 		B99FCE932B98C08D00C73370 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B99FCE922B98C08D00C73370 /* FirebaseDatabase */; };
 		B99FCE952B98C08D00C73370 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B99FCE942B98C08D00C73370 /* FirebaseDatabaseSwift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670C72E72BD949C6005E2C19 /* ViewController22.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController22.swift; sourceTree = "<group>"; };
 		B99FCE982B98C1B300C73370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9F146652B976BD300904935 /* AudienceImput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudienceImput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F146682B976BD300904935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				B9F1466A2B976BD300904935 /* SceneDelegate.swift */,
 				B9F1466C2B976BD300904935 /* ViewController.swift */,
 				B9F1466E2B976BD300904935 /* Main.storyboard */,
+				670C72E72BD949C6005E2C19 /* ViewController22.swift */,
 				B9F146A02B97721500904935 /* SugestViewController.swift */,
 				B9F1469E2B9771D600904935 /* SeeShowsViewController.swift */,
 				B9F1469C2B9771AD00904935 /* SeeResponcesViewController.swift */,
@@ -301,6 +304,7 @@
 				B9F1469B2B97718700904935 /* AdminViewController.swift in Sources */,
 				B9F1469D2B9771AD00904935 /* SeeResponcesViewController.swift in Sources */,
 				B9F146992B97715F00904935 /* AddShowViewController.swift in Sources */,
+				670C72E82BD949C6005E2C19 /* ViewController22.swift in Sources */,
 				B9F146A12B97721500904935 /* SugestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

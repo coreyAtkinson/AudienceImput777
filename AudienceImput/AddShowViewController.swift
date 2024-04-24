@@ -126,12 +126,14 @@ var yay = ref.child("shows").childByAutoId()
 class AddShowViewController: UIViewController {
 
     @IBOutlet weak var nameOutlet: UITextField!
-    
     @IBOutlet weak var passOutlet: UITextField!
+    @IBOutlet weak var adminOutlet: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+   
+        
+        
 
         /*
         AppData.ref.child("s").observe(.childAdded, with: { (snapshot) in
