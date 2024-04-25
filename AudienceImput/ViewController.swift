@@ -69,6 +69,11 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func signIn(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "toSign", sender: self)
+        
+    }
+    
 }
 

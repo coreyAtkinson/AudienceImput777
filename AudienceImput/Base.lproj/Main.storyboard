@@ -41,11 +41,23 @@
                                     <segue destination="6g5-ke-8Aw" kind="show" id="9WW-Fo-FDb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-i1-4Kw">
+                                <rect key="frame" x="146" y="612" width="213" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign into a current show!"/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ckr-oD-05e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.88062153706550017" green="1" blue="0.97316321587230936" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="9yK-L1-QU6"/>
+                    <connections>
+                        <segue destination="CkU-l7-Fcs" kind="show" identifier="toSign" id="kqO-1b-JxM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,13 +106,15 @@
                         <viewLayoutGuide key="safeArea" id="QTQ-f3-vVu"/>
                         <color key="backgroundColor" red="0.89213710571004223" green="1" blue="0.89117016601878807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yVz-jB-ifz"/>
                     <connections>
                         <outlet property="textOutlet" destination="dUh-d5-dQg" id="WnT-Jc-vNe"/>
+                        <segue destination="IJ5-A1-MkL" kind="show" identifier="toYass" id="wZl-6l-7bi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfW-kV-lR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="731.78410794602701"/>
+            <point key="canvasLocation" x="1889" y="-681"/>
         </scene>
         <!--See Shows View Controller-->
         <scene sceneID="e9l-jP-Ebz">
@@ -464,10 +478,13 @@
             <point key="canvasLocation" x="101.59999999999999" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wZl-6l-7bi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

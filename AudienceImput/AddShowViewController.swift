@@ -166,7 +166,7 @@ class AddShowViewController: UIViewController {
         
         AppData.ref.child("totalShows").childByAutoId().setValue(AppData.totalShows)
         //okay you need to add a new text outlet to add
-        var s = Show(name: nameOutlet.text!, pass: passOutlet.text!, currentTopic: "", responces: ["test responce 1", "test responce 2"], indexInArray: AppData.totalShows, admin: "INSERT ADMIN HERE")
+        var s = Show(name: nameOutlet.text!, pass: passOutlet.text!, currentTopic: "no topic added", responces: ["test responce 1", "test responce 2"], indexInArray: AppData.totalShows, admin: adminOutlet.text!)
       //  AppData.shows.append(s)
         s.saveToFirebase()
 
