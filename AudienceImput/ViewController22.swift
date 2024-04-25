@@ -37,7 +37,7 @@ class ViewController22: UIViewController {
             print("show not found")
         }
         else{
-            print("show: \(AppData.shows[AppData.index].name)")
+            print("show: \(AppData.shows[AppData.index-1].name)")
         }
     }
     
