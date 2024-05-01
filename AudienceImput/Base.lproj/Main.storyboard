@@ -96,8 +96,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-yd-jwF">
+                                <rect key="frame" x="67" y="129" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-d5-dQg">
-                                <rect key="frame" x="139" y="122" width="97" height="34"/>
+                                <rect key="frame" x="194" y="122" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -400,6 +407,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dQa-mN-8Av"/>
                     <connections>
+                        <outlet property="pause2Ou" destination="Xw9-V4-yf9" id="X0F-Sn-rgT"/>
                         <outlet property="topicOutlet" destination="Xeb-UD-Q2N" id="gup-FY-kjs"/>
                         <outlet property="updateOutlet" destination="hmv-am-8me" id="Qch-Gq-9OW"/>
                     </connections>
@@ -479,7 +487,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wZl-6l-7bi"/>
+        <segue reference="7J7-lT-0wE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>

@@ -25,22 +25,36 @@ class SugestViewController: UIViewController {
     
 
     @IBAction func addAction(_ sender: UIButton) {
-        var text = newSuggestionOutlet.text!
-        counter = 10
-        AppData.shows[AppData.i].responces.append(text)
         
-        AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
-        newSuggestionOutlet.text = ""
-        addButtonOutlet.isEnabled = false
-      //  cooldownOutlet.text = "wait 10 seconds before next sugestion!"
-        var t = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+//    if(AppData.pause == true){ // Olivia
+//
+//            addButtonOutlet.isEnabled = false
+//            AppData.pause == false
+//            
+//        }
+//        
+     //  else{
+            
+            var text = newSuggestionOutlet.text!
+            counter = 10
+            AppData.shows[AppData.i].responces.append(text)
+            
+            AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
+            newSuggestionOutlet.text = ""
+            addButtonOutlet.isEnabled = false
+            //  cooldownOutlet.text = "wait 10 seconds before next sugestion!"
+            var t = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+            
+            Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { _ in
+                self.addButtonOutlet.isEnabled = true
+                self.cooldownOutlet.text = " "
+                
+            })
+            
+            // make an if statement to check if pause is true and will disable add action - Olivia
+            
+      //  }
         
-        Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { _ in
-            self.addButtonOutlet.isEnabled = true
-            self.cooldownOutlet.text = " "
-           
-        })
-      
     }
     
    

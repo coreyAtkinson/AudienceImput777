@@ -9,6 +9,8 @@ import UIKit
 
 class AdminViewController: UIViewController {
 
+    @IBOutlet weak var pause2Ou: UIButton!
+    
     @IBOutlet weak var updateOutlet: UITextField!
     @IBOutlet weak var topicOutlet: UILabel!
     override func viewDidLoad() {
@@ -47,7 +49,10 @@ class AdminViewController: UIViewController {
     
     @IBAction func toggleOnAndOffOutlet(_ sender: UIButton) {
         
-        
+//        AppData.pause = true // Olivia
+//        pause2Ou.titleLabel?.text = "unpause sugestions"
+//        
+//        
     }
     
 }

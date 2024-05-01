@@ -17,6 +17,7 @@ import FirebaseDatabase
      static var ref: DatabaseReference!
      static var i = 0
      static var updated = false
+     static var pause = false // Olivia 
 
 }
 
@@ -162,6 +163,7 @@ class AddShowViewController: UIViewController {
     }
     
     @IBAction func addShow(_ sender: UIButton) {
+        
         AppData.totalShows = AppData.totalShows + 1
         
         AppData.ref.child("totalShows").childByAutoId().setValue(AppData.totalShows)
