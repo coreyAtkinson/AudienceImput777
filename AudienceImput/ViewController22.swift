@@ -24,7 +24,7 @@ class ViewController22: UIViewController {
         {
             if textOutlet.text == AppData.shows[hello].admin
             {
-                AppData.index = AppData.shows[hello].indexInArray
+                AppData.index = AppData.shows[hello].indexInArray - 1
             }
             else
             {
@@ -37,7 +37,8 @@ class ViewController22: UIViewController {
             print("show not found")
         }
         else{
-            print("show: \(AppData.shows[AppData.index-1].name)")
+            print("show: \(AppData.shows[AppData.index].name)")
+            performSegue(withIdentifier: "toYass", sender: self)
         }
     }
     

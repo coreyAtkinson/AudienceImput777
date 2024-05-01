@@ -172,7 +172,7 @@ class AddShowViewController: UIViewController {
 
         s.indexInArray = AppData.totalShows - 1
       
-        AppData.index = AppData.totalShows - 1
+        AppData.index = AppData.totalShows - 2
         print(AppData.index)
         performSegue(withIdentifier: "toAdmin", sender: nil)
         

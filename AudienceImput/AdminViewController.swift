@@ -15,6 +15,7 @@ class AdminViewController: UIViewController {
         super.viewDidLoad()
 //        topicOutlet.text = AppData.shows[AppData.index].currentTopic
         print("where are we rn???? \(AppData.index)")
+        topicOutlet.text = AppData.shows[AppData.index].currentTopic
         // Do any additional setup after loading the view.
         
        
