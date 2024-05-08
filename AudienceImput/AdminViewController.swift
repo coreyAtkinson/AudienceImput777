@@ -21,15 +21,6 @@ class AdminViewController: UIViewController {
         // Do any additional setup after loading the view.
         
        
-            
-            
-            
-            
-            
-        
-        
-        
-        
         
     }
     
@@ -44,7 +35,7 @@ class AdminViewController: UIViewController {
        AppData.shows[AppData.index].updateFirebase(dict: ["currentTopic": AppData.shows[AppData.index].currentTopic])
 
         topicOutlet.text = AppData.shows[AppData.index].currentTopic
-        
+        updateOutlet.resignFirstResponder()
     }
     
     @IBAction func toggleOnAndOffOutlet(_ sender: UIButton) {

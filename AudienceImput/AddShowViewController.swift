@@ -188,6 +188,8 @@ class AddShowViewController: UIViewController {
         self.present(alertController2, animated: true, completion: nil)
     //    performSegue(withIdentifier: "toAdmin", sender: nil)
         
+        adminOutlet.resignFirstResponder()
+        
     }
     
    
