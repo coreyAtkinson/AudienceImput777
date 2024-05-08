@@ -41,7 +41,7 @@ class AdminViewController: UIViewController {
         print("did the topic change?????:    \(AppData.shows[AppData.index].currentTopic)")
         
         
-       AppData.shows[AppData.index ].updateFirebase(dict: ["currentTopic": AppData.shows[AppData.index].currentTopic])
+       AppData.shows[AppData.index].updateFirebase(dict: ["currentTopic": AppData.shows[AppData.index].currentTopic])
 
         topicOutlet.text = AppData.shows[AppData.index].currentTopic
         

@@ -174,9 +174,19 @@ class AddShowViewController: UIViewController {
 
         s.indexInArray = AppData.totalShows - 1
       
-        AppData.index = AppData.totalShows - 2
+        AppData.index = s.indexInArray
         print(AppData.index)
-        performSegue(withIdentifier: "toAdmin", sender: nil)
+        let alertController2 = UIAlertController(title: "Show Added!", message: "", preferredStyle: .alert)
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: { (action : UIAlertAction!) -> Void in
+            self.performSegue(withIdentifier: "toAdmin", sender: nil)
+        })
+        
+        
+        
+        alertController2.addAction(okayAction)
+        self.present(alertController2, animated: true, completion: nil)
+    //    performSegue(withIdentifier: "toAdmin", sender: nil)
         
     }
     
