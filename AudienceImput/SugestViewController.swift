@@ -37,7 +37,7 @@ class SugestViewController: UIViewController {
             
             var text = newSuggestionOutlet.text!
             counter = 10
-            AppData.shows[AppData.i].responces.append(text)
+            AppData.shows[AppData.i].responces.insert(text, at: 0)
             
             AppData.shows[AppData.i].updateFirebase(dict: ["responces": AppData.shows[AppData.i].responces])
             newSuggestionOutlet.text = ""

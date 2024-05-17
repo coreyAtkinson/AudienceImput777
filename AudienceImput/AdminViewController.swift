@@ -33,6 +33,8 @@ class AdminViewController: UIViewController {
         
         
        AppData.shows[AppData.index].updateFirebase(dict: ["currentTopic": AppData.shows[AppData.index].currentTopic])
+        
+        AppData.shows[AppData.index].updateFirebase(dict: ["responces": [""]])
 
         topicOutlet.text = AppData.shows[AppData.index].currentTopic
         updateOutlet.resignFirstResponder()
